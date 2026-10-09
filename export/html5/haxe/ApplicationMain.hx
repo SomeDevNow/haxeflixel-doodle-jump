@@ -16,11 +16,11 @@ class ApplicationMain
 	#if !macro
 	public static function main()
 	{
-		lime.system.System.__registerEntryPoint("blank_window_template", create);
+		lime.system.System.__registerEntryPoint("doodle_jump", create);
 
 		#if (js && html5)
 		#if (munit || (utest && openfl_enable_utest_legacy_mode))
-		lime.system.System.embed("blank_window_template", null, 0, 0);
+		lime.system.System.embed("doodle_jump", null, 0, 0);
 		#end
 		#else
 		create(null);
@@ -35,10 +35,10 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "4";
+		app.meta["build"] = "1";
 		app.meta["company"] = "";
-		app.meta["file"] = "blank_window_template";
-		app.meta["name"] = "Game";
+		app.meta["file"] = "doodle_jump";
+		app.meta["name"] = "Doodle Jump";
 		app.meta["packageName"] = "com.example.myapp";
 		app.meta["version"] = "1.0.0";
 
@@ -60,7 +60,7 @@ class ApplicationMain
 			minimized: false,
 			parameters: {},
 			resizable: true,
-			title: "Game",
+			title: "Doodle Jump",
 			width: 0,
 			x: null,
 			y: null,
@@ -102,7 +102,7 @@ class ApplicationMain
 		app.createWindow(attributes);
 		
 		#elseif air
-		app.window.title = "Game";
+		app.window.title = "Doodle Jump";
 		#else
 		app.window.context.attributes.background = 0;
 		app.window.frameRate = 60;
